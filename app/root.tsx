@@ -20,9 +20,9 @@ export const links: LinksFunction = () => [
 ]
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
-	const res = await getUserFromSession(request)
-	console.log('root.tsx: ', res)
-	return res
+	const userId = await getUserFromSession(request)
+	console.log('root.tsx: ', userId)
+	return userId
 }
 
 export default function App() {
@@ -43,6 +43,7 @@ export default function App() {
 				style={{ fontFamily: 'dirooz' }}
 			>
 				<Outlet />
+
 				<ScrollRestoration />
 				<Scripts />
 				<LiveReload />
@@ -63,13 +64,15 @@ export function ErrorBoundary() {
 				<Links />
 			</head>
 			<body
+				dir="rtl"
 				className="bg-primary text-secondary"
 				style={{ fontFamily: 'dirooz' }}
 			>
 				<header className="bg-secondary">
 					<MainNavigation />
 				</header>
-				<h1>
+
+				<h1 className="text-center text-xl text-opacity-70 mt-16">
 					{isRouteErrorResponse(error)
 						? error.data
 						: error instanceof Error

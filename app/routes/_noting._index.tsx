@@ -1,11 +1,15 @@
 import type { LoaderFunctionArgs, MetaFunction } from '@remix-run/node'
-import { useLoaderData } from '@remix-run/react'
+import { Link, useLoaderData } from '@remix-run/react'
 import { getUserFromSession } from '~/data/auth.server'
 
 export const meta: MetaFunction = () => {
 	return [
 		{ title: 'Write For Life' },
-		{ name: 'description', content: 'Welcome to Remix!' },
+		{
+			name: 'description',
+			content:
+				'a place for writing, remembering, noting, and everything that comes with it!',
+		},
 	]
 }
 
@@ -21,6 +25,8 @@ export default function Index() {
 	return (
 		<div>
 			<h1>hello {userId || 'friend'}!</h1>
+
+			<Link to="/dictionary">Dictionary</Link>
 		</div>
 	)
 }

@@ -3,11 +3,11 @@ import MainNavigation from '~/components/MainNavigation'
 
 export default function NotingLayout() {
 	return (
-		<>
-			<header className="bg-secondary">
+		<div className="flex flex-col h-screen overflow-hidden">
+			<header className="bg-secondary h-1/6">
 				<MainNavigation />
 			</header>
 			<Outlet />
-		</>
+		</div>
 	)
 }

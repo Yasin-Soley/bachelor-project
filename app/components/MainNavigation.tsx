@@ -5,10 +5,9 @@ import Button from './Button'
 
 export default function MainNavigation() {
 	const userId = useRouteLoaderData('root')
-	console.log(userId)
 
 	return (
-		<nav className="flex justify-start px-14 py-5">
+		<nav className="flex justify-start px-14 py-5 ">
 			<div className="px-8 py-1 text-xl font-bold tracking-widest">
 				<Link className="text-primary" to="/">
 					LOGO
