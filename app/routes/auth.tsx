@@ -16,8 +16,8 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
 	// todo: shortcut of above will be:
 	return userId && redirect('/')
 	// ? with &&:
-	// ? if all statements are true, it will return last one
-	// ? otherwise, it returns the first falsy value it reaches
+	// ? it will return the first falsy value it reaches
+	// ? otherwise(all statements are true), it returns the last one
 }
 
 export default function LoginPage() {

@@ -1,6 +1,6 @@
 export default function WordBox() {
 	return (
-		<div className="bg-green-100 rounded-sm py-4">
+		<div className="bg-white bg-opacity-50 rounded-sm py-4 text-hover">
 			<div className="p-4 pt-0 border-b-2 border-tertiary flex">
 				<h4 className="font-bold tracking-wider mr-auto">WORD</h4>
 				<span className="ml-1 px-1">ترجمه1</span>
